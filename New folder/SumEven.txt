@@ -1,0 +1,23 @@
+import java.util.Scanner;
+	public class SumEven {
+		public static void main(String []args] {
+			Scanner input = new Scanner(System.in);
+
+			System.out.print(" Enter a number :");
+			int number = input.nextInt();
+
+		int counter = 0;
+		int sum = 0;
+		for (number == 0; number % 2 == 0; counter <= 10) {
+		
+		sum = sum + number;
+		counter = counter + 1;
+}
+
+		System.out.print(sum);
+
+   }
+}
+	
+		
+		

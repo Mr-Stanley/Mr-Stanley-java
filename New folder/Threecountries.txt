@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Threecountries{
+	public static void main(String []args){
+
+	input Scanner = new Scanner(System.in);
+
+
+	System.out.println("Enter first integer");
+	int country1 = input.nextInt;
+
+
+
+    }
+ }
+
+	
+	
+	
