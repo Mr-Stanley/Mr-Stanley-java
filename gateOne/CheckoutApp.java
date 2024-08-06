@@ -1,23 +1,36 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+
+
 
 	public class CheckoutApp{
 		public static void main(String [] args){
 		
-		Scanner Scanner = new Scanner(System.in);
 
-		System.out.println("/nWelcome To ObodUkwu Supermarket And Stores");
+		
 
 		ArrayList<String> NameOfCustomer = new ArrayList<String>();
 		ArrayList<String> Products = new ArrayList<String>();
 		ArrayList<Integer> Quantity = new ArrayList<Integer>(); 	
 		ArrayList<Double> PricePerUnit = new ArrayList<Double>();
+		ArrayList<String> CashierName = new ArrayList<String>();
+		ArrayList<Integer> DiscountPercent = new ArrayList<Integer>();
 
-		
-		
-		System.out.println("/nMain Office");
-		System.out.println("\nLocation");
-		System.out.println("tel");
+
+			LocalDateTime now = LocalDateTime.now();
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+			String formattedNow = now.format(formatter);
+
+				Scanner Scanner = new Scanner(System.in);
+
+		System.out.println("SEMICOLON SUPERMARKET AND STORES");
+		//System.out.println("MAIN BRANCH");
+		//System.out.println("Location : 312, HERBERT MACAULEY WAY, SABO YABA, LAGOS.");
+		//System.out.println("TEL : 03293828343 ");
+		//System.out.println("Cashier : Pretty Amaka");
+	
 
 		String ContinueOrTerminate = "yes";
 
@@ -37,10 +50,6 @@ import java.util.ArrayList;
 
 			System.out.println("How Many Pieces");
 			Quantity.add(Scanner.nextInt());
-			/**if(Quantity <= 0){
-				 System.out.println("Invalid Selection");
-				 
-			}**/
 		
 			
 			System.out.println("How Much Per Unit");
@@ -52,8 +61,36 @@ import java.util.ArrayList;
 			
 
 			}
-		System.out.println(Products);
-		System.out.println(Quantity);	
-		System.out.println(PricePerUnit);
-		}
+
+		System.out.println("What is the cashier's name?");
+		CashierName.add(Scanner.next());
+			
+		System.out.println("what percentage Discount is the customer getting");
+		DiscountPercent.add(Scanner.nextInt());
+			
+			
+		System.out.println("WELCOME TO SEMICOLON SUPERMARKET AND STORES");
+		System.out.println("MAIN BRANCH");
+		System.out.println("Location : 312, HERBERT MACAULEY WAY, SABO YABA, LAGOS.");
+		System.out.println("TEL : 03293828343 ");
+		System.out.println("Cashier : Pretty Amaka");
+		System.out.println("Customer Name :"+ NameOfCustomer);
+		System.out.println("==============================================================");
+		
+			System.out.print("ITEM  ");
+		
+			for(int count = 1; count <= Products.size(); count++){
+				System.out.printf("%3s", "");
+
+					}
+			System.out.printf("%10s%10s%5s%5s%n","QTY", "PRICE","", "TOTAL(NGN)");
+			System.out.println("--------------------------------------------------------------");
+				
+				for(int index = 0; index < products.size(); index++){
+	
+					System.out.println(Products.get(index));
+					}
+
+		
+			}
 	}
