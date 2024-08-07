@@ -71,22 +71,16 @@ import java.time.LocalDateTime;
 		System.out.println("Customer Name :"+ NameOfCustomer);
 		System.out.println("==============================================================");
 		
-		System.out.print("ITEM  ");
 		
-			for(int count = 1; count <= Products.size(); count++){
-				System.out.printf("%3s", "");
-				}
-		System.out.printf("%10s%10s%5s%15s%n","QTY", "PRICE","", "TOTAL(NGN)");
+		
+		System.out.printf("%7s%10s%10s%7s%7s%n", "ITEM","QTY", "PRICE","", "TOTAL(NGN)");
 		System.out.println("--------------------------------------------------------------");
 				
-			for(int index = 0; index < Products.size(); index++){
-				System.out.println(Products.get(index));
-				}
 				
 			for(int index = 0; index < Quantity.size(); index++){
 				Total.add(Quantity.get(index) * PricePerUnit.get(index));
 					
-		System.out.printf("%15s%15s%15s%n", Quantity.get(index), PricePerUnit.get(index),Total.get(index));
+		System.out.printf("%10s%12s%7s%15s%n", Products.get(index), Quantity.get(index), PricePerUnit.get(index),Total.get(index));
 				}
 		System.out.println("----------------------------------------------------------------");
 			for (int index = 0; index < Total.size(); index++){
@@ -126,25 +120,13 @@ import java.time.LocalDateTime;
 		System.out.println("Customer Name :"+ NameOfCustomer);
 		System.out.println("==============================================================");
 		
-		System.out.print("ITEM  ");
-		
-			for(int count = 1; count <= Products.size(); count++){
-				System.out.printf("%3s", "");
-
-					}
-		System.out.printf("%10s%10s%5s%15s%n","QTY", "PRICE","", "TOTAL(NGN)");
+		System.out.printf("%7s%10s%10s%7s%7s%n", "ITEM","QTY", "PRICE","", "TOTAL(NGN)");
 		System.out.println("--------------------------------------------------------------");
 				
-			for(int index = 0; index < Products.size(); index++){
-	
-				System.out.println(Products.get(index));
-					}
-				
-			
 			for(int index = 0; index < Quantity.size(); index++){
-					Total.add(Quantity.get(index) * PricePerUnit.get(index));
+				Total.add(Quantity.get(index) * PricePerUnit.get(index));
 					
-		System.out.printf("%15s%15s%15s%n", Quantity.get(index), PricePerUnit.get(index),Total.get(index));
+		System.out.printf("%10s%12s%7s%15s%n", Products.get(index), Quantity.get(index), PricePerUnit.get(index),Total.get(index));
 					}
 		System.out.println("----------------------------------------------------------------");
 	
