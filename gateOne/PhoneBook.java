@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 public class PhoneBook{
-	public static void main(String [] args){
+	public static void main(){
 
 		Scanner Scanner = new Scanner(System.in);
 		
@@ -18,7 +18,8 @@ public class PhoneBook{
 		number = Scanner.next();
 
 		int numbers = Integer.parseInt(String.valueOf(number));
-		if (numbers == 1){ 
+		if (numbers == 1){
+	
 			System.out.println("Enter FirstName : ");
 				firstName.add(Scanner.next());
 			
@@ -29,16 +30,41 @@ public class PhoneBook{
 				firstName.add(Scanner.next());
  	
 		}
+		
+	
 			System.out.println(firstName);
+
+		main();
+
 		if (numbers == 2){
-			for(int index = 0; index < firstName.size(); index++);
 			
-			firstName += deleted;
-			
+			for(int index = 0; index < firstName.size(); index++){
+
+			firstName = null;
+				
 			System.out.println(firstName);
 			}
+			}
+			main();
+		if (numbers == 3){
+			System.out.println("Enter a contact name or number to search");
+				int nameOfContact = Scanner.nextInt();
+			    if (firstName.contains(nameOfContact)) {
+				    System.out.println("Contact Exists in our DataBase");
+				    } else {
+					    System.out.println("Contacts does not exist");
+}
+}
+				
 
+
+		
+			}
+
+		public static void main(String [] args){
+		main();
 		}
+
 
 			
 
