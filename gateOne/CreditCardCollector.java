@@ -41,7 +41,7 @@ public class CreditCardCollector{
 		double total = 0;
 		for (int index = CardNumber.length()-2; index >= 0; index-=2){
 			int numbers = Integer.parseInt(String.valueOf(CardNumber.charAt(index)));
-			numbers = numbers *2;
+			numbers *= 2;
 			if(numbers  > 9) numbers = numbers / 10 + numbers % 10;
 				total = total + numbers;
 				numbers = 0;
