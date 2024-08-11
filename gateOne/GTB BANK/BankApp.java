@@ -7,13 +7,13 @@ import java.util.Arrays;
 		Scanner Scanner = new Scanner(System.in);
 		        Random random=new Random();
 		int selectNumber = 0;
-		int accountNumb = 0;
-		String pin = "";
-		String comfirmPin = "";
+		int accountDeletion = 0;
+		
 		ArrayList<String> firstName = new ArrayList<String>();
 		ArrayList<String> lastName = new ArrayList<String>();
 		ArrayList<String> phoneNumber = new ArrayList<String>();
 		ArrayList<Integer> accountNumber = new ArrayList<Integer>();
+		ArrayList<String> pin = new ArrayList<String>();
 	while (selectNumber != 9){	
 	System.out.printf("%s%n%s%n%s%n%s%n%s%n%s%n%s%n%s%n", "1. Create Account.", "2. Close Account.", "3. Deposit Money.", "4. Withdraw Money.", "5. Check Account Balance.", "6. Inter Account Transfer.", "7. Change Pin.", "9. Terminate.");
 
@@ -35,30 +35,42 @@ import java.util.Arrays;
 		  
 		System.out.println(" Account Created Successfully!!!");
 		System.out.println("Please enter a four digit pin");
-			pin = Scanner.next();
-		System.out.println("Please re-enter the four digit pin for comfirmation");
-			comfirmPin = Scanner.next();
-		if (comfirmPin == pin) System.out.println(" Pin created successfully");
-			System.out.println("Pin Created succesfully");
+			pin.add(Scanner.next());
+		System.out.println(" Pin created successfully");
 		accountNumber.add(random.nextInt(1000));
 		for(int index = 0; index < accountNumber.size(); index++){
-		System.out.println("Your Account Number is : " + accountNumber.get(index));
+		
+		System.out.println("Here are your account details : " + "NAME : " + firstName.get(index) + " " + lastName.get(index) + " " + "PHONENUMBER : " + phoneNumber.get(index) + " " + "PIN :" + pin.get(index) + " " + "ACCOUNT NUMBER :" + accountNumber.get(index));	
+			
 			
 			}
 			}
 			}
-		int accountDeletion = 0;
-		String comfirmationToCloseAccount = "yes";
-		while(closeAccount.equalsIgnoreCase("yes"))
-		System.out.println("Do you want to close your account");
-			comfirmationToCloseAccount = Scanner.next();
+		
 
-		System.out.println("Enter the Account Number of the account you want to delete");
-			accountDeletion = Scanner.nextInt();
-		if(accountDeletion == accountNumber.get(index)){
-				
-        		accountNumber.remove(index);
-		System.out.println(accountNumber(index));
+		if(selectNumber == 2){ 
+		
+		System.out.print("Enter your account Number");
+		accountDeletion = Scanner.nextInt();
+		if (accountDeletion == accountNumber.get(index)){
+		System.out.println("Enter your pin to comfirm");
+		String comfirmPin = Scanner.next();
+
+		if (comfirmPin == pin.get(index)){
+		
+		firstName.remove(index);
+		lastName.remove(index);
+		phoneNumber.remove(index);
+		pin.remove(index);
+		
+			}
+		else
+		System.out.println("Invalid Pin");
+			}
+			
+		
+			
+			
 			}
 }
 

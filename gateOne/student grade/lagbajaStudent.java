@@ -50,24 +50,25 @@ public class lagbajaStudent{
 				
 				System.out.println(Arrays.deepToString(lagbajaStudentsGrades));
 					
-				//System.out.print("STUDENT  ");
+				System.out.print("STUDENT  ");
 		
-			//for(int count = 1; count <= numberOfSubjects; count++){
-				//System.out.printf("%10s", "SUB" +count);
+			for(int counts = 1; counts <= numberOfSubjects; counts++){
+				System.out.printf("%10s", "SUB" +counts);
 
-					//}
-			//System.out.printf("%10s%10s%10s%n", "TOTAL ", "AVERAGE ", "POSITION");
+					
+			System.out.printf("%10s%10s%10s%n", "TOTAL ", "AVERAGE ", "POSITION");
 	
-			//for(int index = 0, count = 1; index < numberOfStudents; index++, count++){
-				//System.out.print("Student "+ count);
+			for(int index = 0; counts = 1; index < numberOfSubjects; index++; counts++){
+				System.out.print("Student "+ counts);
 				
 					
-			//for(int element = 0; element < numberOfSubjects; element++){
-				//System.out.printf("%10d", lagbajaStudentsGrades[index][element]);
+			for(int element = 0; element < numberOfSubjects; element++){
+				System.out.printf("%10d", lagbajaStudentsGrades[index][element]);
 						}
-				//System.out.printf("%8d%9.2f%10d", total[index], average[index], position[count]);
-				//System.out.println();
-					//}
-
+				System.out.printf("%8d%9.2f%10d", total[index], average[index], position[counts]);
+				System.out.println();
+					}
+					}
+					}
 		}
 	}
