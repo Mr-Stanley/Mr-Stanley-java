@@ -58,7 +58,7 @@ public class lagbajaStudent{
 					
 			System.out.printf("%10s%10s%10s%n", "TOTAL ", "AVERAGE ", "POSITION");
 	
-			for(int index = 0; counts = 1; index < numberOfSubjects; index++; counts++){
+			for(int index = 0; counts = 1; index < numberOfStudents; index++; counts++){
 				System.out.print("Student "+ counts);
 				
 					
