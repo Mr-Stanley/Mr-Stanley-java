@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CreditCardCollector{
+public class creditCardCollector{
 	public static void main(String [] args){
 	
 		Scanner Scanner = new Scanner(System.in);
